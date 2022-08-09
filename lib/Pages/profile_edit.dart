@@ -1,0 +1,245 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mvp_project/Pages/area_edit.dart';
+import 'package:mvp_project/Pages/email_edit.dart';
+import 'package:mvp_project/Pages/job_title_edit.dart';
+
+class ProfileEdit extends StatefulWidget
+{
+  @override
+  State<ProfileEdit> createState() => _ProfileEditState();
+}
+
+
+
+class _ProfileEditState extends State<ProfileEdit>
+{
+
+  showDialougeBox()
+  {
+    showModalBottomSheet(
+        shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(15.r)
+    ),
+        backgroundColor: Colors.transparent,
+        context: (context),
+        builder: (context) {
+          return Container(
+            height: 265.h,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.r),
+                color: Colors.transparent
+            ),
+            child: Column(
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      height: 60.h,
+
+                      decoration: BoxDecoration(
+                          color: Color(0xffFFFFFF),
+                        borderRadius: BorderRadius.only(topLeft: Radius.circular(10.r), topRight: Radius.circular(10.r))
+                      ),
+                      child: Center(
+                        child: Text('Take a photo', style: TextStyle(color: Color(0xff555555), fontSize: 18.sp),),
+                      ),
+                    ),
+                    Divider(
+                      height: 2.h,
+                      color: Color(0xffD9D9D9),
+                      thickness: 2.sp,
+                    ),
+                    Container(
+                      height: 60.h,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFFFFFF),
+                          // /borderRadius: BorderRadius.only(topLeft: Radius.circular(10.r), topRight: Radius.circular(10.r))
+                      ),
+                      child: Center(
+                        child: Text('Choose from library', style: TextStyle(color: Color(0xff555555), fontSize: 18.sp),),
+                      ),
+                    ),
+                    Divider(
+                      height: 2.h,
+                      color: Color(0xffD9D9D9),
+                      thickness: 2.sp,
+                    ),
+                    Container(
+                      height: 60.h,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFFFFFF),
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10.r), bottomRight: Radius.circular(10.r))
+                      ),
+                      child: Center(
+                        child: Text('Remove Current photo', style: TextStyle(color: Color(0xff555555), fontSize: 18.sp),),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10.h,),
+                InkWell(
+                  onTap: ()
+                  {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    height: 60.h,
+
+                    decoration: BoxDecoration(
+                        color: Color(0xffFFFFFF),
+                        borderRadius: BorderRadius.circular(10.r),
+                    ),
+                    child: Center(
+                      child: Text('Cancel', style: TextStyle(color: Color(0xff555555), fontSize: 18.sp),),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        });
+  }
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+      backgroundColor: Color(0xffA1A0F2),
+      appBar: AppBar(
+        title: Text('Profile', style: TextStyle(fontSize: 22.sp, fontWeight: FontWeight.w900),),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor:Color(0xffA1A0F2),
+        leading: Icon(Icons.arrow_back_ios, size: 20.r,),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 20      .r),
+            child: IconButton(
+                onPressed: ()
+                {
+                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileEdit()));
+                },
+                icon: Icon(Icons.edit_outlined, size: 25.r,)),
+          ),
+        ],
+      ),
+      body: Stack(
+        children: [
+
+          Positioned(
+            top: 140.h,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
+                  color: Color(0xffFFFFFF)
+              ),
+
+            ),
+          ),
+
+
+          Positioned(
+              top: 55.r,
+              child: Container(
+                width:  MediaQuery.of(context).size.width,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      onTap: ()
+                      {
+                        showDialougeBox();
+                      },
+                      child: CircleAvatar(
+
+                        radius: 80.r,
+                        child: Image.asset('images/profile_img.png'),
+                      ),
+                    ),
+                    SizedBox(height: 10.h,),
+
+                    Text('Simon Max', style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w700),),
+                    SizedBox(height: 5.h,),
+
+
+                    Padding(
+                      padding: EdgeInsets.all(20.r),
+                      child: Column(
+
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+
+                          SizedBox(height: 15.h,),
+
+
+
+                          Text('Biography', style: TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w800),),
+                          SizedBox(height: 15.h,),
+                          Row(
+                            children: [
+                              Image.asset('icon/calendar.png', height: 18, color:Color(0xff3D3F3E) ,),
+                              SizedBox(width: 12.w,),
+                              InkWell(
+                                onTap: ()
+                                {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> AreaEdit()));
+                                },
+                                  child: Text('Area : Bandhagen', style: TextStyle(color: Color(0xff3D3F3E),fontSize: 15.sp ),)),
+                            ],
+                          ),
+                          SizedBox(height: 10.h,),
+                          Row(
+                            children: [
+                              Image.asset('icon/world.png', height: 18,color:Color(0xff3D3F3E)),
+                              SizedBox(width: 12.w,),
+                              InkWell(
+                                onTap: ()
+                                {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> JobTitleEdit()));
+                                },
+                                  child: Text('Job: Graphic Designer', style: TextStyle(color: Color(0xff3D3F3E),fontSize: 15.sp ),)),
+                            ],
+                          ),
+                          SizedBox(height: 10.h,),
+                          Row(
+                            children: [
+                              Image.asset('icon/portfolio.png', height: 18,color:Color(0xff3D3F3E)),
+                              SizedBox(width: 12.w,),
+                              InkWell(
+                                onTap: ()
+                                {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>EmailEdit()));
+                                },
+                                  child: Text('Email : simontest@gmail.com ', style: TextStyle(color: Color(0xff3D3F3E),fontSize: 15.sp ),)),
+                            ],
+                          ),
+                          SizedBox(height: 15.h,),
+
+
+
+
+
+
+
+
+                        ],
+                      ),
+                    ),
+
+
+                  ],
+                ),
+              )
+          ),
+
+
+
+
+        ],
+      ),
+    );
+  }
+}
