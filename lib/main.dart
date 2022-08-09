@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mvp_project/Pages/profile_page.dart';
+import 'package:mvp_project/profile_page.dart';
 
 void main()
 {
