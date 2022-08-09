@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget
     return ScreenUtilInit(
       builder: (context, child) => MaterialApp(
           theme: ThemeData(
-              //backgroundColor: Color(0xffA1A0F2),
               fontFamily: 'Nuni'
           ),
           debugShowCheckedModeBanner: false,

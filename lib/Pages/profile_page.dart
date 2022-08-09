@@ -92,7 +92,7 @@ class _ProfilePageState extends State<ProfilePage>
                           SizedBox(height: 15.h,),
                           Row(
                             children: [
-                              Image.asset('icon/calendar.png', height: 18,),
+                              Image.asset('icon/calendar.png', height: 18.h,color:Color(0xff3D3F3E)),
                               SizedBox(width: 12.w,),
                               Text('Neighbour since 2012', style: TextStyle(color: Color(0xff3D3F3E),fontSize: 15.sp ),),
                             ],
@@ -100,7 +100,7 @@ class _ProfilePageState extends State<ProfilePage>
                           SizedBox(height: 8.h,),
                           Row(
                             children: [
-                              Image.asset('icon/world.png', height: 18,),
+                              Image.asset('icon/world.png', height: 18.h,color:Color(0xff3D3F3E)),
                               SizedBox(width: 12.w,),
                               Text('English', style: TextStyle(color: Color(0xff3D3F3E),fontSize: 15.sp ),),
                             ],
@@ -108,7 +108,7 @@ class _ProfilePageState extends State<ProfilePage>
                           SizedBox(height: 8.h,),
                           Row(
                             children: [
-                              Image.asset('icon/portfolio.png', height: 18,),
+                              Image.asset('icon/portfolio.png', height: 18.h,color:Color(0xff3D3F3E)),
                               SizedBox(width: 12.w,),
                               Text('Graphic Designer      ', style: TextStyle(color: Color(0xff3D3F3E),fontSize: 15.sp ),),
                             ],
@@ -121,10 +121,9 @@ class _ProfilePageState extends State<ProfilePage>
                           ),
                           SizedBox(height: 15.h,),
 
-
-
                           Text('Interests', style: TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w800),),
                           SizedBox(height: 10.h,),
+
                           Row(
                             children: [
                               Container(
@@ -214,28 +213,15 @@ class _ProfilePageState extends State<ProfilePage>
                                   child: Text('Spa & Wellness', style: TextStyle(color: Color(0xffA1A0F2),fontSize: 13.sp)),
                                 ),
                               ),
-
                             ],
                           ),
-
-
-                          SizedBox(height: 30.h,),
-
-
-
                         ],
                       ),
                     ),
-
-
                   ],
                 ),
               )
           ),
-
-
-
-
         ],
       )
     );

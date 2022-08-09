@@ -111,14 +111,20 @@ class _ProfileEditState extends State<ProfileEdit>
         centerTitle: true,
         elevation: 0,
         backgroundColor:Color(0xffA1A0F2),
-        leading: Icon(Icons.arrow_back_ios, size: 20.r,),
+        leading: IconButton(
+          onPressed: ()
+          {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back_ios, size: 20.r,)),
+
         actions: [
           Padding(
-            padding: EdgeInsets.only(right: 20      .r),
+            padding: EdgeInsets.only(right: 20.r),
             child: IconButton(
                 onPressed: ()
                 {
-                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileEdit()));
+
                 },
                 icon: Icon(Icons.edit_outlined, size: 25.r,)),
           ),
@@ -133,7 +139,7 @@ class _ProfileEditState extends State<ProfileEdit>
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(25.r)),
                   color: Color(0xffFFFFFF)
               ),
 
@@ -180,7 +186,7 @@ class _ProfileEditState extends State<ProfileEdit>
                           SizedBox(height: 15.h,),
                           Row(
                             children: [
-                              Image.asset('icon/calendar.png', height: 18, color:Color(0xff3D3F3E) ,),
+                              Image.asset('icon/calendar.png', height: 18.h, color:Color(0xff3D3F3E) ,),
                               SizedBox(width: 12.w,),
                               InkWell(
                                 onTap: ()
@@ -193,7 +199,7 @@ class _ProfileEditState extends State<ProfileEdit>
                           SizedBox(height: 10.h,),
                           Row(
                             children: [
-                              Image.asset('icon/world.png', height: 18,color:Color(0xff3D3F3E)),
+                              Image.asset('icon/world.png', height: 18.h,color:Color(0xff3D3F3E)),
                               SizedBox(width: 12.w,),
                               InkWell(
                                 onTap: ()
@@ -206,7 +212,7 @@ class _ProfileEditState extends State<ProfileEdit>
                           SizedBox(height: 10.h,),
                           Row(
                             children: [
-                              Image.asset('icon/portfolio.png', height: 18,color:Color(0xff3D3F3E)),
+                              Image.asset('icon/portfolio.png', height: 18.h,color:Color(0xff3D3F3E)),
                               SizedBox(width: 12.w,),
                               InkWell(
                                 onTap: ()
@@ -216,28 +222,14 @@ class _ProfileEditState extends State<ProfileEdit>
                                   child: Text('Email : simontest@gmail.com ', style: TextStyle(color: Color(0xff3D3F3E),fontSize: 15.sp ),)),
                             ],
                           ),
-                          SizedBox(height: 15.h,),
-
-
-
-
-
-
-
 
                         ],
                       ),
                     ),
-
-
                   ],
                 ),
               )
           ),
-
-
-
-
         ],
       ),
     );

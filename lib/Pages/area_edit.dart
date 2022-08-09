@@ -27,7 +27,9 @@ class _AreaEditState extends State<AreaEdit>
             },
             icon: Icon(Icons.arrow_back_ios, color: Colors.black, size: 20.sp,),
           ),
+
           title:  Text('Area', style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w900, color: Colors.black),),
+
           actions: [
             Padding(
               padding: EdgeInsets.only(right: 20.r),
@@ -35,6 +37,9 @@ class _AreaEditState extends State<AreaEdit>
             )
           ],
         ),
+
+
+
         body: ListView(
           children: const [
             ListTile(

@@ -27,7 +27,9 @@ class _EmailEditState extends State<EmailEdit>
           },
           icon: Icon(Icons.arrow_back_ios, color: Colors.black, size: 20.sp,),
         ),
+
         title:  Text('Email', style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w900, color: Colors.black),),
+
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 20.r),
