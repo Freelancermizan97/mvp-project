@@ -134,7 +134,6 @@ class _ProfileEditState extends State<ProfileEdit>
       ),
       body: Stack(
         children: [
-
           Positioned(
             top: 140.h,
             child: Container(
@@ -149,6 +148,7 @@ class _ProfileEditState extends State<ProfileEdit>
           ),
 
 
+          // Profile Info
           Positioned(
               top: 55.r,
               child: Container(
@@ -156,6 +156,7 @@ class _ProfileEditState extends State<ProfileEdit>
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    //Profile Image
                     InkWell(
                       onTap: ()
                       {
@@ -169,23 +170,21 @@ class _ProfileEditState extends State<ProfileEdit>
                     ),
                     SizedBox(height: 10.h,),
 
+                    //Name
                     Text('Simon Max', style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w700),),
                     SizedBox(height: 5.h,),
 
 
+                    //Biography
                     Padding(
                       padding: EdgeInsets.all(20.r),
                       child: Column(
-
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-
-                          SizedBox(height: 15.h,),
-
-
-
+                          //Bio
                           Text('Biography', style: TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w800),),
                           SizedBox(height: 15.h,),
+                          //Area
                           Row(
                             children: [
                               Image.asset('icon/calendar.png', height: 18.h, color:Color(0xff3D3F3E) ,),
@@ -199,6 +198,8 @@ class _ProfileEditState extends State<ProfileEdit>
                             ],
                           ),
                           SizedBox(height: 10.h,),
+
+                          //Job
                           Row(
                             children: [
                               Image.asset('icon/world.png', height: 18.h,color:Color(0xff3D3F3E)),
@@ -212,6 +213,8 @@ class _ProfileEditState extends State<ProfileEdit>
                             ],
                           ),
                           SizedBox(height: 10.h,),
+
+                          //Email
                           Row(
                             children: [
                               Image.asset('icon/portfolio.png', height: 18.h,color:Color(0xff3D3F3E)),

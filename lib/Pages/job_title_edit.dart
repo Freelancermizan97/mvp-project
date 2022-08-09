@@ -43,18 +43,23 @@ class _JobTitleEditState extends State<JobTitleEdit>
 
             title: Text('Developer', style: TextStyle(color: Colors.black),),
           ),
+
           ListTile(
             title: Text('Developer', style: TextStyle(color: Colors.black),),
           ),
+
           ListTile(
             title: Text('Backend Developer', style: TextStyle(color: Colors.black),),
           ),
+
           ListTile(
             title: Text('Forntend developer', style: TextStyle(color: Colors.black),),
           ),
+
           ListTile(
             title: Text('System developer', style: TextStyle(color: Colors.black),),
           ),
+
           ListTile(
             title: Text('Java developer ', style: TextStyle(color: Colors.black),),
           ),

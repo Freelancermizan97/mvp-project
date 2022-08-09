@@ -46,11 +46,8 @@ class _EmailEditState extends State<EmailEdit>
           child: Center(
             child: TextFormField(
               enabled: true,
-              cursorColor: Theme.of(context).primaryColor,
               decoration: InputDecoration(
                 border: InputBorder.none,
-                //prefixIcon: Icon(widget.iconData, color: Color(0xff00BFA6),),
-                focusColor: Theme.of(context).primaryColor,
                 hintText: "Email :",
                 hintStyle: TextStyle(color: Color(0xff555555)),
                 prefixIcon: Icon(Icons.email_outlined, color: Color(0xff3D3F3E),),

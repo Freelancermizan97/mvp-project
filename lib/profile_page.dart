@@ -61,13 +61,14 @@ class _ProfilePageState extends State<ProfilePage>
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    // Image
                     CircleAvatar(
-
                       radius: 80.r,
                       child: Image.asset('images/profile_img.png'),
                     ),
                     SizedBox(height: 10.h,),
 
+                    //Name & info
                     Text('Simon Max', style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w800),),
                     SizedBox(height: 5.h,),
                     Text('Riksbyggen', style: TextStyle(fontSize: 14.sp, color: Color(0xff3D3F3E), fontWeight: FontWeight.w600),),
@@ -75,6 +76,7 @@ class _ProfilePageState extends State<ProfilePage>
                     Text('Årstavägen 14', style: TextStyle(fontSize: 14.sp,fontWeight: FontWeight.w600, color: Color(0xff3D3F3E)),),
                     SizedBox(height: 5.h,),
 
+                    //Biography
                     Padding(
                       padding: EdgeInsets.all(20.r),
                       child: Column(
@@ -87,8 +89,6 @@ class _ProfilePageState extends State<ProfilePage>
                             thickness: 2.sp,
                           ),
                           SizedBox(height: 15.h,),
-
-
 
                           Text('Biography', style: TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w800),),
                           SizedBox(height: 15.h,),
@@ -123,9 +123,9 @@ class _ProfilePageState extends State<ProfilePage>
                           ),
                           SizedBox(height: 15.h,),
 
+                          // Interests
                           Text('Interests', style: TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w800),),
                           SizedBox(height: 10.h,),
-
                           Row(
                             children: [
                               Container(
