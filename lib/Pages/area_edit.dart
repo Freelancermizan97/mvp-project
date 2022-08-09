@@ -9,6 +9,8 @@ class AreaEdit extends StatefulWidget
 
 
 
+
+
 class _AreaEditState extends State<AreaEdit>
 {
   @override
@@ -48,9 +50,11 @@ class _AreaEditState extends State<AreaEdit>
 
               title: Text('Bandhagen', style: TextStyle(color: Colors.black),),
             ),
+
             ListTile(
               title: Text('Stockholm ', style: TextStyle(color: Colors.black),),
             ),
+
             ListTile(
               title: Text('Årtsa', style: TextStyle(color: Colors.black),),
             ),
