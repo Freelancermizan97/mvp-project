@@ -37,9 +37,6 @@ class _ProfilePageState extends State<ProfilePage>
       ),
       body: Stack(
         children: [
-
-
-
           Positioned(
             top: 140.h,
             child: Container(
@@ -52,6 +49,11 @@ class _ProfilePageState extends State<ProfilePage>
 
             ),
           ),
+
+
+
+
+
           Positioned(
               top: 55.r,
               child: Container(
@@ -66,7 +68,7 @@ class _ProfilePageState extends State<ProfilePage>
                     ),
                     SizedBox(height: 10.h,),
 
-                    Text('Simon Max', style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w700),),
+                    Text('Simon Max', style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w800),),
                     SizedBox(height: 5.h,),
                     Text('Riksbyggen', style: TextStyle(fontSize: 14.sp, color: Color(0xff3D3F3E), fontWeight: FontWeight.w600),),
                     SizedBox(height: 5.h,),

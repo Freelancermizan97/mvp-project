@@ -25,7 +25,8 @@ class _ProfileEditState extends State<ProfileEdit>
         context: (context),
         builder: (context) {
           return Container(
-            height: 265.h,
+            padding: EdgeInsets.only(left: 10.r, right: 10.r),
+            height: 280.h,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15.r),
                 color: Colors.transparent
@@ -35,11 +36,12 @@ class _ProfileEditState extends State<ProfileEdit>
                 Column(
                   children: [
                     Container(
+                      
                       height: 60.h,
 
                       decoration: BoxDecoration(
                           color: Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.only(topLeft: Radius.circular(10.r), topRight: Radius.circular(10.r))
+                        borderRadius: BorderRadius.only(topLeft: Radius.circular(15.r), topRight: Radius.circular(15.r))
                       ),
                       child: Center(
                         child: Text('Take a photo', style: TextStyle(color: Color(0xff555555), fontSize: 18.sp),),
@@ -69,7 +71,7 @@ class _ProfileEditState extends State<ProfileEdit>
                       height: 60.h,
                       decoration: BoxDecoration(
                           color: Color(0xffFFFFFF),
-                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10.r), bottomRight: Radius.circular(10.r))
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15.r), bottomRight: Radius.circular(15.r))
                       ),
                       child: Center(
                         child: Text('Remove Current photo', style: TextStyle(color: Color(0xff555555), fontSize: 18.sp),),
@@ -88,7 +90,7 @@ class _ProfileEditState extends State<ProfileEdit>
 
                     decoration: BoxDecoration(
                         color: Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.circular(10.r),
+                        borderRadius: BorderRadius.circular(15.r),
                     ),
                     child: Center(
                       child: Text('Cancel', style: TextStyle(color: Color(0xff555555), fontSize: 18.sp),),
